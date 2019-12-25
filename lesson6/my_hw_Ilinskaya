@@ -1,0 +1,26 @@
+class Tree :
+    def __init__(self,typee, age, height):
+        self.typee = typee
+        self.age = age
+        self.height = height
+
+    def showinfo (self):
+        print (self.typee+1, self.age+1, self.height+1 )
+        
+class Fruit(Tree) :
+
+    def __init__(self,typee, age, height, fruit):
+        self.typee = typee
+        self.age = age
+        self.height = height
+        self.fruit = fruit
+
+    def showinfo(self):
+        print (self.typee, self.age+1, self.height+1 )
+
+    def collect(self):
+        print(self.fruit*self.age*self.height)
+
+Apple = Fruit("Apple tree", 12, 13, 2)
+Apple.collect()
+Apple.showinfo()
